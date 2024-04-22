@@ -1,0 +1,395 @@
+
+::selection {
+  background: #bd54dd;
+}
+::-webkit-selection {
+  background: #2D2F36;
+}
+::-moz-selection {
+  background: #2D2F36;
+}
+.sedan-regular {
+  font-family: "Sedan", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sedan-regular-italic {
+  font-family: "Sedan", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+body {
+  background: white;
+  font-family: 'Inter UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+.page {
+  background: url("../img/fondo.jpg");
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 40px);
+  position: absolute;
+  place-content: center;
+  width: calc(100% - 40px);
+}
+@media (max-width: 767px) {
+  .page {
+    height: auto;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+}
+.container {
+  flex-direction: revert;
+    display: flex;
+    height: 312px;
+    margin: 0px auto;
+    width: 700px;
+}
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    height: 630px;
+    width: 320px;
+  }
+}
+
+.left {
+  margin-right: 20px;
+    background: rgba(255, 255, 255, 0.808);
+    height: calc(100% - 30px);
+    top: 20px;
+    position: relative;
+    width: 90%;
+    box-shadow: rgb(153 153 153) -1px 0px 20px 9px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    top: 22px;
+}
+@media (max-width: 767px) {
+  .left {
+
+    height: 100%;
+    left: 20px;
+    width: calc(100% - 10px);
+    max-height: 270px;
+  }
+}
+.login {
+  margin-left: 30px;
+  color: #bd54dd;
+  font-size: 50px;
+  font-weight: 800;
+  margin: 40px 40px 40px;
+    background-image: linear-gradient(to right, #10002b, #3b1b58, #3c096c, #5a189a, #7b2cbf, #9d4edd, #c77dff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+.eula {
+  color: #000000;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 40px;
+}
+.right {
+  background: #2d2f368a;
+  box-shadow: rgba(153, 153, 153, 0.178) -1px 0px 20px 9px;
+  color: #F1F1F2;
+  position: relative;
+  width: 95%;
+  top: -14%;
+  height: 135%;
+}
+
+
+@media (max-width: 767px) {
+  .right {
+    flex-shrink: 0;
+    height: 100%;
+    width: 110%;
+    max-height: 350px;
+  }
+}
+svg {
+  position: absolute;
+  width: 320px;
+}
+path {
+  fill: none;
+  stroke: url(#linearGradient);;
+  stroke-width: 4;
+  stroke-dasharray: 240 1386;
+}
+
+.form {
+  margin: 35px;
+  position: absolute;
+}
+ /* Estilos para el botón */
+ #submit {
+  position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #8059df;
+    font-size: 26px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    background: transparent;
+    border: 2px solid transparent;
+    cursor: pointer;
+    outline: none;
+    left: 50px;
+    top: -20px;
+}
+
+/* Estilo del texto del botón */
+#submit span {
+  position: absolute;
+  display: block;
+}
+
+/* Animación de los elementos de línea */
+#submit span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #9c03f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+#submit span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #9c03f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+#submit span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #9c03f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+#submit span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #9c03f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+/* Estilos al pasar el cursor sobre el botón */
+#submit:hover {
+  background: #3a0ca3;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #4c00ff, 0 0 25px #4c00ff, 0 0 50px #4c00ff, 0 0 100px #4c00ff;
+}
+
+/* Estilos para los labels y inputs */
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #fbf9ff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+  color:#bd54dd;
+  padding: 10px;
+  background: content-box; 
+  border: 2px solid #8059df;
+  border-radius: 7px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}Estilos base del botón */
+#submit {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #8059df;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  background: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+  outline: none;
+  top: -10px;
+  left: 50px;
+}
+
+/* Estilo del texto del botón */
+#submit span {
+  position: absolute;
+  display: block;
+}
+
+/* Animación de los elementos de línea */
+#submit span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #9c03f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+#submit span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #9c03f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+#submit span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #9c03f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+#submit span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #9c03f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+/* Estilos al pasar el cursor sobre el botón */
+#submit:hover {
+  background: #3a0ca3;
+  color: #ffffff5d;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #4c00ff, 0 0 25px #4c00ff, 0 0 50px #4c00ff, 0 0 100px #4c00ff;
+}
+.right p {
+  background: transparent;
+  color: #707172c2;
+  margin-top: 325px;
+  text-align: center;
+  font-size: 15px;
+  top: 10px;
+}
+
+.right p a{
+  color: #9c03f4;
+
+}
